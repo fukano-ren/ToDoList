@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :userid %>ユーザーID<br>
+    <%= f.label :userid, "ユーザーID" %><br>
     <%= f.text_field :userid %>
   </div>
   <div class="field">
-    <%= f.label :username %>名前<br>
+    <%= f.label :username, "名前" %><br>
     <%= f.text_field :username %>
   </div>
   <div class="field">
-    <%= f.label :password %>パスワード<br>
-    <%= f.text_field :password %>
+    <%= f.label :password, "パスワード" %><br>
+    <%= f.password_field :password %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "ユーザー登録"%>
   </div>
 <% end %>

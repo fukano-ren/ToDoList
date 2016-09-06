@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :due_date %>日付<br>
-    <%= f.date_select :due_date %>
+    <%= f.label :due_date, "日付" %><br>
+    <%= f.date_select :due_date ,use_month_numbers: true %>
   </div>
   <div class="field">
-    <%= f.label :category_id %>カテゴリー<br>
+    <%= f.label :category_id, "カテゴリー" %><br>
     <%= f.collection_select :category_id,Category.all ,:categoryname,:categoryname %>
   </div>
   <div class="field">
-    <%= f.label :name %>予定の内容<br>
+    <%= f.label :name, "予定の内容" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :done %>チェック<br>
+    <%= f.label :done, "チェック" %><br>
     <%= f.check_box :done %>
   </div>
   <div class="field">
-    <%= f.label :user_id %>ユーザーID<br>
+    <%= f.label :user_id, "ユーザーID" %><br>
     <%= f.collection_select :user_id,User.all ,:username,:username %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "タスク登録" %>
   </div>
 <% end %>
